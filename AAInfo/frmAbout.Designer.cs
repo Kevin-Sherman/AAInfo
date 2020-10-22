@@ -65,6 +65,7 @@
             this.btnContact.TabIndex = 23;
             this.btnContact.Text = "Report";
             this.btnContact.UseVisualStyleBackColor = true;
+            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
             // label6
             // 

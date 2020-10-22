@@ -54,6 +54,7 @@
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label2
             // 
@@ -103,7 +104,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Send Message";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.frmMessage_Load);
+            this.Load += new System.EventHandler(this.frmMail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
