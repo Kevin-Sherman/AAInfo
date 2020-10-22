@@ -31,6 +31,11 @@ namespace AAInfo
 
         }
 
+        /// <summary>
+        /// Retrieves all of the default text inside of the relevant fields
+        /// Not limited to just three fields as long as it is properly accounted for.
+        /// </summary>
+        /// <returns>String[] of all default text</returns>
         public string[] getText()
         {
             string[] text = new string[3];
@@ -42,13 +47,12 @@ namespace AAInfo
             return text;
         }
 
-        public void setText(string[] replacementText)
-        {
-            rtbText1.Text = replacementText[0];
-            rtbText2.Text = replacementText[1];
-            rtbText3.Text = replacementText[2];
-        }
-
+        /// <summary>
+        /// Gets a list of all keys inside of the form.
+        /// NOTE: THESE ARE POPULATED MANUALLY
+        /// ORDER IS IMPORTANT AND MUST BE RESPECTED
+        /// </summary>
+        /// <returns>string[] of all relevant keys</returns>
         public string[] getTextKeys()
         {
             string[] keys = new string[4];
@@ -58,6 +62,44 @@ namespace AAInfo
             keys[3] = "<<LICENCE>>";
 
             return keys;
+        }
+
+        /// <summary>
+        /// Takes processed strings from InfoDisplayer, sending it off to be formatted and set by buildTextBox
+        /// </summary>
+        /// <param name="replacementText">String[] of text that has been processed and is ready to be imported b ack</param>
+        public void setText(string[] replacementText)
+        {
+            buildTextBox(replacementText[0], rtbText1);
+            buildTextBox(replacementText[1], rtbText2);
+            buildTextBox(replacementText[2], rtbText3);
+        }
+
+        /// <summary>
+        /// Takes the formatted text, splitting it off of the selected operator '|' to differentiate between bolded and unbolded sections
+        /// </summary>
+        /// <param name="input">String that needs to be formatted</param>
+        /// <param name="RTF">RichTextBox that the text will be displayed into</param>
+        private void buildTextBox(string input, RichTextBox RTF)
+        {
+            string[] seperated = input.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
+            bool isBold = true;
+            RTF.Clear();
+            foreach (string chunks in seperated)
+            {
+                if (isBold)
+                {
+                    RTF.SelectionFont = new Font(rtbText1.Font, FontStyle.Bold);
+                    RTF.AppendText(chunks);
+                    isBold = false;
+                }
+                else
+                {
+                    RTF.SelectionFont = new Font(rtbText1.Font, FontStyle.Regular);
+                    RTF.AppendText(chunks);
+                    isBold = true;
+                }
+            }
         }
     }
 }
