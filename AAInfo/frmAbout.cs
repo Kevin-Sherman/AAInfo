@@ -30,5 +30,21 @@ namespace AAInfo
         {
 
         }
+
+        public string[] getText()
+        {
+            string[] text = new string[3];
+
+            text[0] = rtbText1.Text;
+            text[1] = rtbText2.Text;
+            text[2] = rtbText3.Text;
+
+            return text;
+        }
+
+        public void setText()
+        {
+
+        }
     }
 }
