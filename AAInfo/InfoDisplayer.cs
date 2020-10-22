@@ -58,19 +58,38 @@ namespace AAInfo
 
         private void formatText()
         {
-            
+            string[] transformText = aboutForm.getText();
+            string[] replaceKeys = aboutForm.getTextKeys();
+            string[] descriptors = new string[] { toolName, companyName, toolDesc, toolLicence  };
+
+            for (int j = 0; j < transformText.Length; j++)
+            {
+                for (int i=0; i<descriptors.Length; i++)
+                {
+                    transformText[j] = replaceFields(transformText[j], replaceKeys[i], descriptors[i]);
+                }
+            }
+
+            aboutForm.setText(transformText);
         }
 
-
-        ///// <summary>
-        ///// The main entry point for the application.
-        ///// </summary>
-        //[STAThread]
-        //static void Main()
-        //{
-        //    Application.EnableVisualStyles();
-        //    Application.SetCompatibleTextRenderingDefault(false);
-        //    Application.Run(new frmAbout());
-        //}
+        private static string replaceFields(string original, string key, string replacer)
+        {
+            if (original.IndexOf(key)>=0)
+            {
+                if (key == "<<DESC>>")
+                {
+                    return original.Replace(key, replacer);
+                }
+                else
+                {
+                    return original.Replace(key, "|" + replacer + "|");
+                }
+            }
+            else
+            {
+                return original;
+            }
+        }
     }
 }

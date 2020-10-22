@@ -42,9 +42,22 @@ namespace AAInfo
             return text;
         }
 
-        public void setText()
+        public void setText(string[] replacementText)
         {
+            rtbText1.Text = replacementText[0];
+            rtbText2.Text = replacementText[1];
+            rtbText3.Text = replacementText[2];
+        }
 
+        public string[] getTextKeys()
+        {
+            string[] keys = new string[4];
+            keys[0] = "<<TOOL>>";
+            keys[1] = "<<COMPANY>>";
+            keys[2] = "<<DESC>>";
+            keys[3] = "<<LICENCE>>";
+
+            return keys;
         }
     }
 }
