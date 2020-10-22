@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/*AAInfo  -frmAbout- Version 1.0
+/*AAInfo  -frmMail- Version 1.0
 * Created: 10/22/2020
 * Updated: 10/22/2020
 * Designed by: Kevin Sherman at Acrelec America
@@ -19,14 +19,14 @@ using System.Windows.Forms;
 
 namespace AAInfo
 {
-    public partial class frmAbout : Form
+    public partial class frmMail : Form
     {
-        public frmAbout()
+        public frmMail()
         {
             InitializeComponent();
         }
 
-        private void frmAbout_Load(object sender, EventArgs e)
+        private void frmMessage_Load(object sender, EventArgs e)
         {
 
         }
