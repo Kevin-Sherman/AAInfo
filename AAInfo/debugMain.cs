@@ -27,7 +27,7 @@ namespace AAInfo
             //testDefaults();
             //testCustomErrorReporter();
             //testCustomInfoDisplayer();
-            //testBothCustom();
+            testBothCustom();
         }
 
         /// <summary>
