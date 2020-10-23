@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="debugMain.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="ErrorReporter.cs" />
     <Compile Include="frmAbout.cs">

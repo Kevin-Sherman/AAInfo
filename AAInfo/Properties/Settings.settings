@@ -6,7 +6,7 @@
       <Value Profile="(Default)">WHacrelec19</Value>
     </Setting>
     <Setting Name="DebugPass" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Shermation5531#</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
