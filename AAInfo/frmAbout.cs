@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 /*AAInfo  -frmAbout- Version 1.0
 * Created: 10/22/2020
-* Updated: 10/22/2020
+* Updated: 10/23/2020
 * Designed by: Kevin Sherman at Acrelec America
 * Contact at: Kevin@Metadevdigital.com
 * 
@@ -19,11 +19,19 @@ using System.Windows.Forms;
 
 namespace AAInfo
 {
-
     public partial class frmAbout : Form
     {
+        private ErrorReporter errorReporter;
+
         public frmAbout()
         {
+            errorReporter = new ErrorReporter();
+            InitializeComponent();
+        }
+
+        public frmAbout(ErrorReporter error)
+        {
+            errorReporter = error;
             InitializeComponent();
         }
 

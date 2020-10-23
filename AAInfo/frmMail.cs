@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 /*AAInfo  -frmMail- Version 1.0
 * Created: 10/22/2020
-* Updated: 10/22/2020
+* Updated: 10/23/2020
 * Designed by: Kevin Sherman at Acrelec America
 * Contact at: Kevin@Metadevdigital.com
 * 
@@ -22,8 +22,20 @@ namespace AAInfo
 {
     public partial class frmMail : Form
     {
+        private Email fromEmail;
+        private string software;
+
         public frmMail()
         {
+            fromEmail = new Email();
+            software = "Acrelec America Software";
+            InitializeComponent();
+        }
+
+        public frmMail(string softwareName, Email email)
+        {
+            fromEmail = email;
+            software = softwareName;
             InitializeComponent();
         }
 
@@ -63,23 +75,16 @@ namespace AAInfo
         /// through this process until a message is successfully sent or the user says so.
         /// </summary>
         /// <param name="message">txtMessage's text sent. Already checked and verified to not be empty.</param>
-        protected void sendEmail(string message)
+        private void sendEmail(string message)
         {
-            SmtpClient mailClient = new SmtpClient();
-            MailMessage toSend = new MailMessage();
             bool retryOpt = true;
-
-            toSend.From = new MailAddress("noreplymetadevdigital@gmail.com", "No Reply");
-            toSend.To.Add(new MailAddress("kevin@metadevdigital.com"));
-            toSend.Subject = "Smart-i Assist Report Message";
-            toSend.Body = message;
-            toSend.IsBodyHtml = true;
+            string subject = software + " Error Report";
 
             while (retryOpt == true)
             {
                 try
                 {
-                    mailClient.Send(toSend);
+                    fromEmail.send(message, subject);
                     retryOpt = false;
                     MessageBox.Show("Message sent successfully!", "Message Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -99,8 +104,6 @@ namespace AAInfo
                     }
                 }
             }
-
-            toSend.Dispose();
         }
     }
 }
