@@ -23,12 +23,21 @@ namespace AAInfo
     {
         private ErrorReporter errorReporter;
 
+        /// <summary>
+        /// Default constructor of frmAbout creating an ErrorReporter class with default parameters
+        /// </summary>
+        /// <see cref="ErrorReporter"/>
         public frmAbout()
         {
             errorReporter = new ErrorReporter();
             InitializeComponent();
         }
 
+        /// <summary>
+        /// frmAbout constructor containing a preconfigured ErrorReporter object
+        /// </summary>
+        /// <param name="error">ErrorReporter class object containing an Email class object and a software name</param>
+        /// <see cref="ErrorReporter"/>
         public frmAbout(ErrorReporter error)
         {
             errorReporter = error;
@@ -113,7 +122,7 @@ namespace AAInfo
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            //TODO
+            errorReporter.showForm();
         }
     }
 }

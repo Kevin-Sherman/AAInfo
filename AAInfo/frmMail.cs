@@ -25,6 +25,10 @@ namespace AAInfo
         private Email fromEmail;
         private string software;
 
+        /// <summary>
+        /// Default constructor of frmMail. Assigns an arbitrary software title and creates an Email object with the default paramaters
+        /// </summary>
+        /// <see cref="Email"/>
         public frmMail()
         {
             fromEmail = new Email();
@@ -32,6 +36,12 @@ namespace AAInfo
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructs frmMail with a custom software name as well as a preconstructed Email object
+        /// </summary>
+        /// <param name="softwareName">String of software name</param>
+        /// <param name="email">Email class object containing preconfigured email settings</param>
+        /// <see cref="Email"/>
         public frmMail(string softwareName, Email email)
         {
             fromEmail = email;
@@ -39,6 +49,11 @@ namespace AAInfo
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Sets focus to the only important asset on the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMail_Load(object sender, EventArgs e)
         {
             txtMessage.Focus();

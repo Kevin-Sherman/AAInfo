@@ -24,6 +24,7 @@ namespace AAInfo
         /// Default constructor of InfoDisplayer
         /// Fills fields with pretty generic information that is assumed based off of the projects this has been associated with thusfar.
         /// Creates an about form using the default constructor, which allows the form to create its own default ErrorReporter rather than handling it inside this class
+        /// <see cref="aboutForm"/>
         /// </summary>
         public InfoDisplayer()
         {
@@ -42,6 +43,8 @@ namespace AAInfo
         /// <param name="company">String of company name</param>
         /// <param name="licence">String of licence type</param>
         /// <param name="desc">String of software description</param>
+        /// <see cref="ErrorReporter"/>
+        /// <see cref="aboutForm"/>
         public InfoDisplayer(string software, string company, string licence, string desc)
         {
             toolName = software;
@@ -59,6 +62,8 @@ namespace AAInfo
         /// <param name="licence">String of licence type</param>
         /// <param name="desc">String of software description</param>
         /// <param name="error">Preconstructed ErrorReporter that was made with the non-default constructor</param>
+        /// <see cref="ErrorReporter"/>
+        /// <see cref="aboutForm"/>
         public InfoDisplayer(string software, string company, string licence, string desc, ErrorReporter error)
         {
             toolName = software;
@@ -79,9 +84,8 @@ namespace AAInfo
         }
 
         /// <summary>
-        /// Gets default text (string[]) and keys(string[]) from aboutForm, references what was input during construction (string[4]), and formats
+        /// Gets default text(string[]) and keys(string[]) from aboutForm, references what was input during construction (string[4]), and formats
         /// the text by itterating through all string[]'s and calling replaceFields() to actually replace.
-        /// 
         /// </summary>
         private void formatText()
         {
@@ -101,7 +105,7 @@ namespace AAInfo
         }
 
         /// <summary>
-        /// Checkes a string for the existance of a key, if found it is replaced with differeing formatting depending on key that was sent
+        /// Checkes a string for the existance of a key, if found it is replaced with the new text and differeing formatting depending on key that was sent
         /// 
         /// NOTE: The text sent in is encapsulated in "<<"&">>". This is setup by default from where the strings originated.
         /// The final step of processing this text will add special formatting depending on the encapsulating characters
