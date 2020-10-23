@@ -31,5 +31,14 @@ namespace AAInfo.Properties {
                 return ((string)(this["DPass"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Shermation5531#")]
+        public string DebugPass {
+            get {
+                return ((string)(this["DebugPass"]));
+            }
+        }
     }
 }

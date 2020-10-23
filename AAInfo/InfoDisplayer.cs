@@ -51,7 +51,7 @@ namespace AAInfo
             companyName = company;
             toolLicence = licence;
             toolDesc = desc;
-            aboutForm = new frmAbout(new ErrorReporter(software));
+            aboutForm = new frmAbout(new ErrorReporter(toolName));
         }
 
         /// <summary>
