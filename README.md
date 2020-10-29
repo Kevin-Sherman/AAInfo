@@ -30,13 +30,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/Metadev-Digital/AAInfo">
-    <img src="https://www.metadevdigital.com/images/acr.png" alt="Logo" width="80" height="80">
+    <img src="https://www.metadevdigital.com/images/acr.png" alt="Logo">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Acrelec America branded about page with built in error reporting system. 
     <br />
     <a href="https://github.com/Metadev-Digital/AAInfo"><strong>Explore the docs »</strong></a>
     <br />
@@ -71,7 +71,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="https://www.metadevdigital.com/acrelec/aainfo/proj.png" alt="AAInfo Download">
 
 AAInfo serves a customized about information panel to any Windows Frame Application served in C#. This tool was created during a refactoring of different applications created for Acrelec America. By creating this as it's own stand-alone tool, AAInfo allows other software to outsource important services like software description and error reporting to it rather than requiring it to be iterated upon over and over again.
 
@@ -182,15 +182,15 @@ Project Link: [https://github.com/Metadev-Digital/AAInfo](https://github.com/Met
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/Metadev-Digital/AAInfo/.svg?style=flat-square
 [contributors-url]: https://github.com/Metadev-Digital/AAInfo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/Metadev-Digital/AAInfo/svg?style=flat-square
 [forks-url]: https://github.com/Metadev-Digital/AAInfo/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/Metadev-Digital/AAInfo/.svg?style=flat-square
 [stars-url]: https://github.com/Metadev-Digital/AAInfo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/Metadev-Digital/AAInfo/.svg?style=flat-square
 [issues-url]: https://github.com/Metadev-Digital/AAInfo/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/Metadev-Digital/AAInfo/.svg?style=flat-square
 [license-url]: https://github.com/Metadev-Digital/AAInfo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/metadev-digital/
