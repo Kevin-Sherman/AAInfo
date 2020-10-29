@@ -33,7 +33,7 @@
     <img src="https://www.metadevdigital.com/images/acr.png" alt="Logo">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">AAInfo</h3>
 
   <p align="center">
     Acrelec America branded about page with built in error reporting system. 
@@ -182,15 +182,30 @@ Project Link: [https://github.com/Metadev-Digital/AAInfo](https://github.com/Met
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Metadev-Digital/AAInfo/.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=flat-square
+[contributors-url]: https://github.com/github_username/repo/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
+[forks-url]: https://github.com/github_username/repo/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=flat-square
+[stars-url]: https://github.com/github_username/repo/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=flat-square
+[issues-url]: https://github.com/github_username/repo/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=flat-square
+[license-url]: https://github.com/github_username/repo/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/github_username
+[product-screenshot]: images/screenshot.png
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/metadev-digital/aainfo.svg?style=flat-square
 [contributors-url]: https://github.com/Metadev-Digital/AAInfo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Metadev-Digital/AAInfo/svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
 [forks-url]: https://github.com/Metadev-Digital/AAInfo/network/members
-[stars-shield]: https://img.shields.io/github/stars/Metadev-Digital/AAInfo/.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/metadev-digital/aainfo.svg?style=flat-square
 [stars-url]: https://github.com/Metadev-Digital/AAInfo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Metadev-Digital/AAInfo/.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/metadev-digital/aainfo.svg?style=flat-square
 [issues-url]: https://github.com/Metadev-Digital/AAInfo/issues
-[license-shield]: https://img.shields.io/github/license/Metadev-Digital/AAInfo/.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/etadev-digital/aainfo.svg?style=flat-square
 [license-url]: https://github.com/Metadev-Digital/AAInfo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/metadev-digital/
