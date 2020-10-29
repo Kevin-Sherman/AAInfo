@@ -109,7 +109,7 @@ Windows Forms Application .Net Framework Project
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-# Email
+### Email
 
 The **Email class** is used to create a repository of email information that is used to ultimately send the messages during error reports. This is created on project creation to handle a possibility of a custom **TO** and **FROM** addresses. Constructors are listed below.
 
@@ -118,7 +118,7 @@ The **Email class** is used to create a repository of email information that is 
 
 <img src="https://www.metadevdigital.com/acrelec/aainfo/snipet1.png" alt="Email class constructors">
   
-# ErrorReporter
+### ErrorReporter
 
 The **ErrorReporter class** is used to generate a Windows Frame containing a configured email allowing a user to type a message and send it to a technician through the application itself. It creates a default *Email class* object unless provided one on object creation.
 
@@ -128,7 +128,7 @@ To display the form, calls to the function .showForm() can be made.
 
 <img src="https://www.metadevdigital.com/acrelec/aainfo/snipet2.png" alt="ErrorReporter class constructors">
 
-# InfoDisplayer
+### InfoDisplayer
 
 The **InfoDisplayer** class is used to generate a Windows Frame containing a specifically formatted about page for the software AAInfo is bundled with as well as an option for the user to issue a report, generating an instance of an ErrorReporter as well. If a preconfigured *ErrorReporter* object is not provided to *InfoDisplayer* during construction, it will contain a default *Email* class object as well as a default branding for error messages.
 
