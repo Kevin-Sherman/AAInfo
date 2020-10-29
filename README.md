@@ -186,13 +186,13 @@ Project Link: [https://github.com/Metadev-Digital/AAInfo](https://github.com/Met
 
 [contributors-shield]: https://img.shields.io/github/contributors/metadev-digital/aainfo.svg?style=flat-square
 [contributors-url]: https://github.com/Metadev-Digital/AAInfo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/metadev-digital/aainfo.svg?style=flat-square
 [forks-url]: https://github.com/Metadev-Digital/AAInfo/network/members
 [stars-shield]: https://img.shields.io/github/stars/metadev-digital/aainfo.svg?style=flat-square
 [stars-url]: https://github.com/Metadev-Digital/AAInfo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/metadev-digital/aainfo.svg?style=flat-square
 [issues-url]: https://github.com/Metadev-Digital/AAInfo/issues
-[license-shield]: https://img.shields.io/github/license/etadev-digital/aainfo.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/metadev-digital/aainfo.svg?style=flat-square
 [license-url]: https://github.com/Metadev-Digital/AAInfo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/metadev-digital/
