@@ -100,11 +100,9 @@ Windows Forms Application .Net Framework Project
 
 ### Installation
 
-1a. Download the .nupkg
-      OR
-1b. Import from [NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) inside of Visual Studio, or through any other IDE.
+1. Download the .nupkg *OR* Import from [NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) inside of Visual Studio, or through any other IDE.
 
-2. Create a ErrorReporter and InfoDisplayer object
+2. Create an Email, ErrorReporter, and InfoDisplayer object
 
 <!-- USAGE EXAMPLES -->
 ## Usage
