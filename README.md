@@ -29,8 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Metadev-Digital/AAInfo">
+    <img src="https://www.metadevdigital.com/images/acr.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
@@ -38,14 +38,14 @@
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Metadev-Digital/AAInfo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://www.nuget.org/packages/AAInfo/">Download the Package</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Metadev-Digital/AAInfo/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Metadev-Digital/AAInfo/issues">Request Feature</a>
   </p>
 </p>
 
@@ -73,70 +73,75 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+AAInfo serves a customized about information panel to any Windows Frame Application served in C#. This tool was created during a refactoring of different applications created for Acrelec America. By creating this as it's own stand-alone tool, AAInfo allows other software to outsource important services like software description and error reporting to it rather than requiring it to be iterated upon over and over again.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+Services contained in AAInfo:
+* An About frame that displays branding and delves into the rights, restrictions, and descriptions of the software that includes AAInfo.
+* Error reporting meant for users to directly submit trouble tickets to developers to keep the tools up and running day-to-day.
+* An Error frame that allows the messages to be customized to include as much detail as possible from the user.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+Of course, no one solution will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
 
 ### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
 
+* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [HTML5](https://html.com/html5/)
+* [Packaged with NuGet](https://www.nuget.org/)
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Import the tool through the [NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) inside of Visual Studio, or through any other IDE.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+Windows Forms Application .Net Framework Project
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
+1a. Download the .nupkg
+      OR
+1b. Import from [NuGet Package Manager](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio) inside of Visual Studio, or through any other IDE.
 
-
+2. Create a ErrorReporter and InfoDisplayer object
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+# Email
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The **Email class** is used to create a repository of email information that is used to ultimately send the messages during error reports. This is created on project creation to handle a possibility of a custom **TO** and **FROM** addresses. Constructors are listed below.
 
+* A non-default to and from email address are required if you wish your error reports to be sent to an email you can access.
+* ErrorReporter class creates a default email class if one is not provided on object creation.
 
+<img src="https://www.metadevdigital.com/acrelec/aainfo/snipet1.png" alt="Email class constructors">
+  
+# ErrorReporter
+
+The **ErrorReporter class** is used to generate a Windows Frame containing a configured email allowing a user to type a message and send it to a technician through the application itself. It creates a default *Email class* object unless provided one on object creation.
+
+To display the form, calls to the function .showForm() can be made.
+
+* To configure the subject to the specific software, add the software name during construction else it will show with default branding.
+
+<img src="https://www.metadevdigital.com/acrelec/aainfo/snipet2.png" alt="ErrorReporter class constructors">
+
+# InfoDisplayer
+
+The **InfoDisplayer** class is used to generate a Windows Frame containing a specifically formatted about page for the software AAInfo is bundled with as well as an option for the user to issue a report, generating an instance of an ErrorReporter as well. If a preconfigured *ErrorReporter* object is not provided to *InfoDisplayer* during construction, it will contain a default *Email* class object as well as a default branding for error messages.
+
+Custom configuration is given in the form of *software name, company name, software licensing, & software description*. Leading/trailing spaces are not required at the begining or ending of a phrase. Description is used in the following context "&Softwarename is used to $Softwaredesc." To display the form, calls to the function .showForm() can be made.
+
+* A preconfigured *ErrorReporter* and *Email* class objects are required during construction of an InfoDisplayer for error messages to be sent to an email address you can access.
+
+<img src="https://www.metadevdigital.com/acrelec/aainfo/snipet3.png" alt="InfoDisplayer class constructors">
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Metadev-Digital/AAInfo/issues) for a list of proposed features (and known issues).
 
 
 
@@ -163,42 +168,30 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Kevin Sherman - [@CMetadev](https://twitter.com/cmetadev) - contact@metadevdigital.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/Metadev-Digital/AAInfo](https://github.com/Metadev-Digital/AAInfo)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[contributors-url]: https://github.com/Metadev-Digital/AAInfo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/Metadev-Digital/AAInfo/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/Metadev-Digital/AAInfo/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]: https://github.com/Metadev-Digital/AAInfo/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/Metadev-Digital/AAInfo/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/company/metadev-digital/
+[product-screenshot]: https://www.metadevdigital.com/images/proj.png
